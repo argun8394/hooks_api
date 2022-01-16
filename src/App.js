@@ -1,25 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import Card from './components/Card';
+import data from './data.json';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header className="header">
+        <img src="https://www.logolynx.com/images/logolynx/55/55a537ca9549600cfd1d0b274b3bc61.png" alt="breaking Bad logo" />
+
       </header>
     </div>
-  );
+  )
 }
 
 export default App;
