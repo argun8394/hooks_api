@@ -1,16 +1,19 @@
 import Card from './components/Card';
 import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 // import data from './data.json'; //data ile hata veriyor!!!!!!!!!!!!!!!!!
 
 function App() {
 const [itemList, setItemList] = useState([]);
 
 useEffect(() =>{
-fetch('https://www.breakingbadapi.com/api/characters')
-  .then(response => response.json())
-  .then((data) =>setItemList(data))
-},[]
-);
+// fetch('https://www.breakingbadapi.com/api/characters')
+//   .then(response => response.json())
+//   .then((data) =>setItemList(data))
+   axios
+    .get("https://www.breakingbadapi.com/api/characters")
+    .then(response => setItemList(response.data))
+},[]);
 
 
   return (
